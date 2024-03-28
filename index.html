@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu de navegación</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Mi Casa Church Regidor</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
 </head>
 <body>
 <header class="header">
@@ -17,7 +18,7 @@
             </div>            
 
             <label for="menu" class="nav__label">
-                <img src="img/menu.svg"  class="nav__img">
+                <img src="img/icon/menu.svg"  class="nav__img">
             </label>
             <input type="checkbox" id="menu" class="nav__input">
 
@@ -30,41 +31,66 @@
         </div>
     </nav>
 
-    <div class="slider">
-        <div class="slider__img">
-            <img src="img/fondo-mobile.jpg" class="img">
-        </div>
 
-        <section class="servicios container">
-            <h1 class="title__servicios">Nuestros servicios</h1>
-            <div class="servicios__container">
-                <div class="servicios__dias lunes">
-                    <h3 class="dia">Lunes</h3>
-                    <p class="parrafo">7:30 p.m a 8:30 p.m</p>
-                </div>
-                <div class="servicios__dias miercoles">
-                    <h3 class="dia">Miércoles</h3>
-                    <p class="parrafo">7:30 p.m a 8:30 p.m</p></div>
-                <div class="servicios__dias sabado">
-                    <h3 class="dia">Sábado</h3>
-                    <p class="parrafo">7:30 p.m a 8:30 p.m</p>
-                </div>
-                <div class="servicios__dias domingo">
-                    <h3 class="dia">Domingos</h3>
-                    <p class="parrafo">9:30 p.m a 10:30 p.m</p>
-                </div>
-            </div>
-            <!-- <div class="redes__sociales">
-        
-            </div> -->
-        </section>
+ <!-- Swiper -->
+ <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="img/img1.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="img/img2.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="img/img3.jpg" alt=""></div>
+      <!-- <div class="swiper-slide">Slide 4</div>
+      <div class="swiper-slide">Slide 5</div>
+      <div class="swiper-slide">Slide 6</div>
+      <div class="swiper-slide">Slide 7</div>
+      <div class="swiper-slide">Slide 8</div>
+      <div class="swiper-slide">Slide 9</div> -->
     </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+          
+<section class="servicios container">
+  <h1 class="title__servicios">Nuestros servicios</h1>
+    <div class="servicios__container">                
+        <div class="servicios__dias miercoles">
+            <h3 class="dia">Miércoles</h3>
+            <p class="parrafo">7:30 p.m a 8:30 p.m</p></div>
+            <div class="servicios__dias sabado">
+                <h3 class="dia">Sábado</h3>
+                <p class="parrafo">7:30 p.m a 8:30 p.m</p>
+            </div>
+            <div class="servicios__dias domingo">
+                <h3 class="dia">Domingos</h3>
+                <p class="parrafo">9:30 p.m a 10:30 p.m</p>
+            </div>
+        </div>
+        <div class="redes__sociales">
+            <div class="phone icon"><img src="img/icon/phone.svg" alt=""></div>
+            <div class="home icon"><img src="img/icon/home.svg" alt=""></div>
+            <a href="#">Ver Mapa</a>
+            <div class="media">
+                <img src="img/icon/face.svg" alt="">
+                <img src="img/icon/inst.svg" alt="">
+                <img src="img/icon/what.svg" alt="">
+            </div>
+        </div>
+    </section>
+</div>
+
+
+
+
     
   
     
 </header>
 
-    
-    
+ <!-- Swiper JS -->
+ <script src="js/swiper-bundle.min.js"></script>
+ <!-- Initialize Swiper -->
+ <script src="js/script.js"></script> 
+
 </body>
 </html>
