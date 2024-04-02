@@ -141,9 +141,10 @@ body{
    
 }
 
-.servicios{
-    
+.servicios{    
     width: 100%;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+    background-blend-mode: multiply,multiply;
 }
 
 .servicios__dias{
@@ -174,8 +175,10 @@ body{
     margin-bottom: 10px;
     width: 80%;
     height: 45px;
-    background-color: rgb(247, 209, 209);
+    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+    background-blend-mode: multiply,multiply;
     border-radius: 15px;
+    position: relative;
 }
 
 .icon{
@@ -189,12 +192,107 @@ body{
 
 }
 .media{
-    display: flex;
+    display: flex;    
     gap: 30px;
 }
 .home::after{
     content: "Barrio Ecopetrol";
     padding-left: 10px;
+}
+
+/* contenido del libro */
+
+
+.books{    
+    width: 100%;
+    height: 500px;    
+}
+
+.parrafo__libro{
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: justify;
+    
+}
+
+.container__book, .book-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container__book{
+    width: 100%;
+    height: 100vh; 
+    background-image: linear-gradient(to left, #BDBBBE 0%, #9D9EA3 100%), radial-gradient(88% 271%, rgba(255, 255, 255, 0.25) 0%, rgba(254, 254, 254, 0.25) 1%, rgba(0, 0, 0, 0.25) 100%), radial-gradient(50% 100%, rgba(255, 255, 255, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%);
+    background-blend-mode: normal, lighten, soft-light;     
+}
+
+.book-content{
+    width: 65%;
+    min-width: 250px;
+    max-width: 400px;
+    height: 330px;
+    position: relative;
+    perspective: 1000px;
+    transition: 1s;
+}
+
+.book{
+    position: absolute;
+    width: 65%;
+    height: 100%;
+    transition: 1s;
+    transform-style: preserve-3d;
+    transform-origin: left;
+    
+}
+
+.face-front, .face-back{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 15px;
+    overflow: hidden;
+    
+}
+
+.face-front{
+    box-shadow: inset 3px 10px 20px -7px black;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    
+}
+
+.face-back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateZ(-1px) rotateY(180deg);
+    box-shadow: inset -3px 10px 20px -7px black;
+   }
+
+#portada{
+    background: url(../img/portada.jpg);
+}
+
+#portada-back{
+    background: url(../img/portada.jpg);
+}
+
+#portada, #portada-back{
+    background-size: 100% 100%;
+}
+
+/* clases que se agregan con js */
+
+.trnsf{
+    transform: translateX(80px);
+}
+
+.trnsf-reset{
+    transform: translateX(0px);
 }
 
 @keyframes mover{
@@ -253,6 +351,20 @@ body{
         align-items: center;
         gap: 30px;
                     
+    }
+
+    /* redes sociales */
+
+    .redes__sociales{
+        flex-direction: column;
+        justify-content: space-between;
+        height: max-content;
+        gap: 20px;
+        
+    }
+
+    .parrafo__libro{
+        font-size: 12px;
     }
    
     
