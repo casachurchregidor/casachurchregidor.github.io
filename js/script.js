@@ -26,14 +26,29 @@ for (let i = 0; i < uno.length; i++) {
 				unoThis.style.transform = 'rotateY(-180deg)';
 			}, 500);
 		}
-		if (tgt.getAttribute("class") == 'face-back') {
+		if (tgt.getAttribute('class') == 'pa') {
 			unoThis.style.zIndex = contZindex;
 			contZindex +=20;
-
+			setTimeout(function(){
+				unoThis.style.transform = 'rotateY(-180deg)';
+			}, 500);
+		}
+		
+		if (tgt.getAttribute('class') == 'face-back') {
+			unoThis.style.zIndex = contZindex;
+			contZindex +=20;
 			setTimeout(function(){
 				unoThis.style.transform = 'rotateY(0deg)';
 			}, 500);
 		}
+		if (tgt.getAttribute('class') == 'pa1') {
+			unoThis.style.zIndex = contZindex;
+			contZindex +=20;
+			setTimeout(function(){
+				unoThis.style.transform = 'rotateY(0deg)';
+			}, 500);
+		}
+		
 
 		if (tgt.getAttribute('id') == 'portada') {
 			flip.classList.remove("trnsf-reset");
