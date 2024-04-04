@@ -3,6 +3,9 @@ let back = document.querySelector('.face-back');
 let flip = document.querySelector('.book-content');
 let uno = document.querySelectorAll('.book');
 let portada = document.querySelectorAll('#portada');
+const openModal = document.querySelector('#openModal');
+const closeModal = document.querySelector('.Cerrar')
+const ver__iframe = document.querySelector('.ver__iframe');
 
 let contZindex = 2;
 let customZindex = 1;
@@ -61,6 +64,16 @@ for (let i = 0; i < uno.length; i++) {
 
 	});
 }
+
+openModal.addEventListener('click', (e) =>{
+	e.preventDefault();
+	ver__iframe.classList.add('mostrar__modal')
+});
+
+closeModal.addEventListener('click', (e) =>{
+	e.preventDefault();
+	ver__iframe.classList.remove('mostrar__modal')
+});
  
 
 
