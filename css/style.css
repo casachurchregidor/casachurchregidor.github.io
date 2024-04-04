@@ -143,8 +143,8 @@ body{
 
 .servicios{    
     width: 100%;
-    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
-    background-blend-mode: multiply,multiply;
+    /* background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+    background-blend-mode: multiply,multiply; */
 }
 
 .servicios__dias{
@@ -173,16 +173,45 @@ body{
 }
 
 .ver__iframe {
-    width: 500px;
-    height: 500px;
-    background-color: aquamarine;
-    position: absolute;
-    top: 50%;
-    bottom: 50%;
-    left: 50%;
-    right: 50%;
-    transform: translateX(-50% -50%);
-    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #29324198;
+    display: flex;
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transition: 1s;
+    transform: translateY(-100vh)
+}
+
+.mostrar__modal{
+    opacity: 1;
+    pointer-events: unset;
+    transform: translateY(0);
+}
+
+.container__iframe, iframe{
+    margin: auto;
+    width: 90%;
+    max-width: 500px;
+    max-height: 90%;
+    text-align: center;
+    
+}
+.img__closed{
+    width: 50px;
+    height: 50px;
+    opacity: .8;
+    background-color: #989898;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+.img__closed:hover{
+    background-color: transparent;
 }
 
 .redes__sociales{
@@ -195,8 +224,8 @@ body{
     margin-bottom: 10px;
     width: 80%;
     height: 45px;
-    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
-    background-blend-mode: multiply,multiply;
+    /* background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+    background-blend-mode: multiply,multiply; */
     border-radius: 15px;
     position: relative;
 }
@@ -237,8 +266,8 @@ body{
 
 .container__book{
     grid-area: libro;
-    background-image: linear-gradient(to left, #BDBBBE 0%, #9D9EA3 100%), radial-gradient(88% 271%, rgba(255, 255, 255, 0.25) 0%, rgba(254, 254, 254, 0.25) 1%, rgba(0, 0, 0, 0.25) 100%), radial-gradient(50% 100%, rgba(255, 255, 255, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%);
-    background-blend-mode: normal, lighten, soft-light;     
+    /* background-image: linear-gradient(to left, #BDBBBE 0%, #9D9EA3 100%), radial-gradient(88% 271%, rgba(255, 255, 255, 0.25) 0%, rgba(254, 254, 254, 0.25) 1%, rgba(0, 0, 0, 0.25) 100%), radial-gradient(50% 100%, rgba(255, 255, 255, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%);
+    background-blend-mode: normal, lighten, soft-light;      */
 }
 
 
@@ -281,11 +310,12 @@ body{
 
 .container__book{
     width: 100%;
-    height: 100vh; 
-    
+    height: 450px; 
+       
 }
 
 .book-content{
+    top: 5px;
     width: 65%;
     min-width: 380px;
     max-width: 472px;
