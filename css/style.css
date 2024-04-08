@@ -102,6 +102,7 @@ body{
     height: 530px;
     margin: 0 auto;
     margin-top: 80px;
+   
     
   }
   
@@ -120,6 +121,9 @@ body{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 50px black;
+    
   } 
 
 
@@ -143,8 +147,8 @@ body{
 
 .servicios{    
     width: 100%;
-    /* background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
-    background-blend-mode: multiply,multiply; */
+    box-shadow: 0 0 60px #8a080826;
+    background-color: lightslategrey;
 }
 
 .servicios__dias{
@@ -228,11 +232,19 @@ body{
     background-blend-mode: multiply,multiply; */
     border-radius: 15px;
     position: relative;
+    background-color: #29324165;
+}
+
+.content__ubicacion{
+   display: flex;
+   width: 70%;
+   justify-content: space-between;
 }
 
 .icon{
     display: flex;
     align-items: center;
+    
 }
 
 .phone::after{
@@ -241,8 +253,37 @@ body{
 
 }
 .media{
+    height: 40px;
     display: flex;    
-    gap: 30px;
+    gap: 50px;  
+    align-items: center; 
+    padding: 10px 15px; 
+    border-radius: 15px;
+    background-color: #52648356;
+}
+
+.mapa{
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 25px;
+    background-color: #304872;
+    border-radius: 15px;
+    font-weight: 100;
+}
+
+.mapa:hover{
+    background-color: lightsteelblue;
+    color: #293241;
+}
+.iconos > img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.iconos > img:hover{
+    background-color: white;
+    
 }
 .home::after{
     content: "Barrio Ecopetrol";
@@ -253,36 +294,37 @@ body{
 
 
 .books{  
-    padding-top: 10px;  
+    
     width: 100%;
     height: 500px;  
     display: grid; 
-    grid-template-areas: 
-    "libro libro description"
-    "libro libro description"; 
+    grid-template-columns: repeat(2, 1fr);
      
       
 }
 
-.container__book{
+/* .container__book{
     grid-area: libro;
     /* background-image: linear-gradient(to left, #BDBBBE 0%, #9D9EA3 100%), radial-gradient(88% 271%, rgba(255, 255, 255, 0.25) 0%, rgba(254, 254, 254, 0.25) 1%, rgba(0, 0, 0, 0.25) 100%), radial-gradient(50% 100%, rgba(255, 255, 255, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%);
-    background-blend-mode: normal, lighten, soft-light;      */
-}
+    background-blend-mode: normal, lighten, soft-light;      
+} */
+
 
 
 .description{
-    grid-area: description;
+       
+    height: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-self: center;
-    width: 200px;
-    
-    margin: 0 auto;    
-    padding: 15px 20px;
+    align-self: center;  
     
 }
+
+.description__container{
+    margin: auto;
+    padding: 10px 15px;
+}
+
 .title__description{
     text-align: center;
     padding-bottom: 10px;
@@ -293,18 +335,29 @@ body{
     
 }
 
+.title__book{
+    padding-top: 15px;
+    font-size: 17px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-bottom: 16px;
+}
+
+.pa, .pa1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: justify;
+}
 
 .parrafo__libro{
     margin-top: 10px;
     font-size: 14px;
-    text-align: justify;
-    
+    text-align: justify;    
 }
 
 .container__book, .book-content{
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
     
 }
 
@@ -317,8 +370,8 @@ body{
 .book-content{
     top: 5px;
     width: 65%;
-    min-width: 380px;
-    max-width: 472px;
+    min-width: 370px;
+    max-width: 412px;
     height: 400px;
     position: relative;
     perspective: 1000px;
@@ -342,6 +395,7 @@ body{
     box-sizing: border-box;
     padding: 15px;
     overflow: hidden;
+    border-radius: 10px;
     
 }
 
@@ -349,6 +403,7 @@ body{
     box-shadow: inset 3px 10px 20px -7px black;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
+    border-radius: 10px;
     
 }
 
@@ -358,10 +413,12 @@ body{
     left: 0;
     transform: translateZ(-1px) rotateY(180deg);
     box-shadow: inset -3px 10px 20px -7px black;
+    border-radius: 10px;
    }
 
 #portada{
     background: url(../img/portada.jpg);
+    border-radius: 10px;
 }
 
 #portada-back{
@@ -449,6 +506,53 @@ body{
         gap: 20px;
         
     }
+
+    .media, .mapa, .phone, .home{        
+        background-color: #29324149;
+        align-self: center;
+        width: 100%;
+        justify-content: center;
+        border-radius: 10px;
+        margin: auto;
+               
+    }
+    .mapa{
+        background-color: #796d7969;
+        width: 90%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;  
+        color:black;  
+        transition: .7s;   
+       
+    }
+
+    .mapa:hover{
+        color: #ffffff;
+        background-color: black;
+    }
+
+    .phone, .home{
+        background-color: rgba(145, 121, 117, 0.418);
+        justify-content: left;
+        padding: 10px 15px;
+        width: 90%;        
+    }
+
+    .content__ubicacion{
+        width: 100%;
+        height: 170px;
+        border-radius: 30px;
+        background-color: #29324149;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        align-content: center;
+        margin: 0 auto;
+    }
+    
 
     .parrafo__libro{
         font-size: 12px;
