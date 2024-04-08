@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="country" content="COL">
+    <meta name="keywords" content="casa church, mi casa church, casa church regidor, mi casa church regidor, iglesia cristiana regidor, iglesias cristianas regidor, regidor"/>
+    <meta name="author" content="Ing. Luis Miguel Arias Mayorca">
     <title>Mi Casa Church Regidor</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
@@ -67,13 +70,17 @@
             </div>
         </div>
         <div class="redes__sociales">
-            <div class="phone icon"><img src="img/icon/phone.svg" alt=""></div>
-            <div class="home icon"><img src="img/icon/home.svg" alt=""></div>
-            <a id="openModal" href="#">Ver Mapa</a>          
+            <div class="content__ubicacion">
+                <div class="phone icon"><img src="img/icon/phone.svg" alt=""></div>
+                <div class="home icon"><img src="img/icon/home.svg" alt=""></div> 
+                <a class="mapa" id="openModal" href="#">Ver Mapa</a>    
+            </div>
+            
+                    
             <div class="media">
-                <a href=""><img src="img/icon/face.svg" alt=""></a>
-                <a href=""><img src="img/icon/inst.svg" alt=""></a>
-                <a href=""><img src="img/icon/what.svg" alt=""></a>               
+                <a href="" class="iconos iconos--face"><img src="img/icon/face.svg" alt=""></a>
+                <a href="" class="iconos"><img src="img/icon/inst.svg" alt=""></a>
+                <a href="" class="iconos"><img src="img/icon/what.svg" alt=""></a>              
                 
             </div>
         </div>
@@ -86,36 +93,44 @@
             <div class="book">
                 <div class="face-front" id="portada"></div>
                 <div class="face-back" id="trsf">
-                    <h1>Title 1</h1>
-                    <p class="pa1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam laborum voluptatibus eaque repudiandae ullam necessitatibus, dolor ad expedita, eum praesentium vitae! Voluptate in itaque modi consequatur. Aliquid odit quisquam quibusdam!</p>
+                    <h1 class="title__book">Salmo 91:3 - 4</h1>
+                    <p class="pa1"><sup>3</sup> Él te librará del lazo del cazador,
+
+                        De la peste destructora.
+                        
+                        <sup>4</sup> Con sus plumas te cubrirá,
+                        
+                        Y debajo de sus alas estarás seguro;
+                        
+                        Escudo y adarga es su verdad.</p>
                 </div>
             </div>
 
             <div class="book">
                 <div class="face-front">
-                    <h1>Title 2</h1>
+                    <h1 class="title__book">Title 2</h1>
                     <p class="pa">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint perferendis nemo blanditiis impedit aut soluta quia illum deserunt, vero quod ducimus placeat voluptate quidem error sequi, earum eos minima in!</p>
                 </div>
                 <div class="face-back">
-                    <h1>Title 3</h1>
+                    <h1 class="title__book">Title 3</h1>
                     <p class="pa1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam laborum voluptatibus eaque repudiandae ullam necessitatibus, dolor ad expedita, eum praesentium vitae! Voluptate in itaque modi consequatur. Aliquid odit quisquam quibusdam!</p>
                 </div>
             </div>
 
             <div class="book">
                 <div class="face-front">
-                    <h1>Title 4</h1>
+                    <h1 class="title__book">Title 4</h1>
                     <p class="pa">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint perferendis nemo blanditiis impedit aut soluta quia illum deserunt, vero quod ducimus placeat voluptate quidem error sequi, earum eos minima in!</p>
                 </div>
                 <div class="face-back">
-                    <h1>Title 5</h1>
+                    <h1 class="title__book">Title 5</h1>
                     <p class="pa1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam laborum voluptatibus eaque repudiandae ullam necessitatibus, dolor ad expedita, eum praesentium vitae! Voluptate in itaque modi consequatur. Aliquid odit quisquam quibusdam!</p>
                 </div>
             </div>
 
             <div class="book">
                 <div class="face-front">
-                    <h1>Title 6</h1>
+                    <h1 class="title__book">Title 6</h1>
                     <p class="pa">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint perferendis nemo blanditiis impedit aut soluta quia illum deserunt, vero quod ducimus placeat voluptate quidem error sequi, earum eos minima in!</p>
                 </div>
                 <div class="face-back" id="portada-back">
@@ -123,10 +138,12 @@
             </div>
         </div>
     </div>
-    <div class="description">
-        <h2 class="title__description">La Palabra de Dios es alimento</h2>
-        <p class="paragragh__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit veniam odit cum alias blanditiis nobis dicta nesciunt itaque quisquam, recusandae a molestiae est aliquid earum quasi animi esse accusamus facilis.</p>
-    </div>
+    <section class="description">
+        <div class="description__container">
+            <h2 class="title__description">La Palabra de Dios es alimento</h2>
+            <p class="paragragh__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit veniam odit cum alias blanditiis nobis dicta nesciunt itaque quisquam, recusandae a molestiae est aliquid earum quasi animi esse accusamus facilis.</p>
+        </div>        
+    </section>
 </section>
 
 <section class="ver__iframe">
